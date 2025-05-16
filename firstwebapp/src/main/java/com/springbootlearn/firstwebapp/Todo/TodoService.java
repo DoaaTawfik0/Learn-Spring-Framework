@@ -43,10 +43,12 @@ public class TodoService {
         todos.removeIf(predicate);
     }
 
-    public void updateTodoById(int id, String description) {
+    public void updateTodoById(int id, String description, LocalDate targetDate) {
         Predicate<? super Todo> predicate = todo -> todo.getId() == id;
         todos.stream().filter(predicate).findFirst().get().setDescription(description);
-//        todos.get(id).setDescription(description);
+        todos.stream().filter(predicate).findFirst().get().setTargetDate(targetDate);
+
+        //        todos.get(id).setDescription(description);
     }
 
 
