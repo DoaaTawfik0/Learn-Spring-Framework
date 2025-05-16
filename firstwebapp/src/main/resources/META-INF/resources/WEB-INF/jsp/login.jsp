@@ -1,25 +1,25 @@
-<html>
-<head>
-	<title>Login Page</title>
-</head>
-<body>
+<%@ include file = "common/header.jspf" %>
+<%@ include file = "common/navigation.jspf" %>
+
 <div class = "container">
-	<h3>Welcome to login Login!</h3>
 
-<h4>Login<h4>
+	<h4>Login
+		<h4>
 
-	<pre>${errorMessage}errorMessage</pre>
-	<form method = "post" >
+			<pre>${errorMessage}</pre>
+			<form method = "post">
 
-		Name: <input type = "text"
-		             name = "name">
-		Password: <input type = "password"
-		                 name = "password">
+				Name: <input type = "text"
+				             name = "name">
+				Password: <input type = "password"
+				                 name = "password">
 
-		Submit<input type = "submit" >
+				Submit<input type = "submit">
 
 
-	</form>
+			</form>
 </div>
 </body>
-</html>
+
+<%@ include file = "common/footer.jspf" %>
+
